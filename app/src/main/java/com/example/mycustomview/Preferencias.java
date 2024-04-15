@@ -35,7 +35,7 @@ public class Preferencias extends AppCompatActivity {
         colores=findViewById(R.id.Colores);
         coloresTexto=findViewById(R.id.ColoresTexto);
         back=findViewById(R.id.atras);
-        ArrayAdapter<String> misColores=new ArrayAdapter<>(this,R.layout.preferencias,opcionesColores);
+        ArrayAdapter<String> misColores=new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,opcionesColores);
         coloresTexto.setAdapter(misColores);
         coloresTexto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -68,6 +68,9 @@ public class Preferencias extends AppCompatActivity {
                 }
                 if (checkedId==R.id.verde){
                     colorSeleccionadoRadioGroup =6;
+                }
+                else {
+                    colorSeleccionadoRadioGroup=1;
                 }
             }
         });
